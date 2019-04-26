@@ -1,0 +1,33 @@
+<div class="content">
+  <div class="row">
+    <div class="col-6">
+      <img mat-card-image src="{{people.image}}">
+    </div>
+    <div class="col-6">
+      <p>
+        <strong>Especie: </strong> {{people.specie}} <br>
+        <strong>Height: </strong> {{people.height}}<br>
+        <strong>Hair: </strong> {{people.hairColor}}<br>
+        <strong>Planet: </strong> {{people.planet}}
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <p>
+      <strong>Movies: </strong>
+      <small *ngFor="let movie of people.movies">
+        {{movie.title}},
+      </small>
+    </p>
+  </div>
+
+  <div class="row">
+    <p>
+      <strong>Movies: </strong>
+      <small *ngFor="let vehicle of people.vehicles">
+        {{vehicle}},
+      </small>
+    </p>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icone / fechar-cinza</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.1737284,11.0420004 L17.368272,5.84745674 L18.7824856,7.2616703 L13.5879419,12.4562139 L19,17.868272 L17.5857864,19.2824856 L12.1737284,13.8704275 L6.7616703,19.2824856 L5.34745674,17.868272 L10.7595148,12.4562139 L5.56497116,7.2616703 L6.97918472,5.84745674 L12.1737284,11.0420004 Z" id="path-1"></path>
+    </defs>
+    <g id="icone-/-fechar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="base" x="0" y="0" width="25" height="25"></rect>
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="icone/menu" fill="#4A4A4A" xlink:href="#path-1"></use>
+    </g>
+</svg>

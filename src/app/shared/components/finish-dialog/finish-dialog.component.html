@@ -1,0 +1,42 @@
+<div class="content">
+  <div align="center">
+    <div class="row">
+      <div class="col">
+        <h1>Quiz Finalizado!</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2>{{points()}} Pontos</h2>
+      </div>
+    </div>
+    <div class="row">
+      <p>Preencha o form a baixo para salvar sua pontuacão:</p>
+    </div>
+    <div class="col">
+      <form [formGroup]="finishForm">
+        <div class="row">
+          <div class="col-12">
+            <mat-form-field [hideRequiredMarker]="true" class="full-width">
+              <input matInput  type="text"  placeholder="Name" formControlName="name" required>
+              <mat-error *ngIf="finishForm.controlIsInvalid('name')">Campo Obrigatorio!</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+         <div class="row">
+          <div class="col-12">
+            <mat-form-field class="full-width" [hideRequiredMarker]="true">
+              <input matInput   type="email"  placeholder="Email" formControlName="email" required>
+              <mat-error *ngIf="finishForm.controlIsInvalid('email')">Campo Obrigatorio!</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <button type="button" class="btn btn-secondary" (click)="finish()">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

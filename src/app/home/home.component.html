@@ -1,0 +1,26 @@
+<div class="container">
+  <div align="center">
+
+    <div class="row">
+      <div class="col" >
+        <img src="/assets/logo.png" alt="Imagem"/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h1 class="main-title">
+          Start Quiz!
+        </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button type="button" class="btn btn-dark btn-lg" (click)="natigateTo('/quiz')" [disabled]="wait">{{ wait ? 'Aguarde...' : 'Jogar'}}</button>
+        <button type="button" class="btn btn-primary btn-lg  ml-2" (click)="natigateTo('/rank')">Ranked</button>
+      </div>
+
+    </div>
+  </div>
+</div>

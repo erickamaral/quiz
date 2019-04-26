@@ -1,0 +1,30 @@
+<mat-card>
+  <img height="191px" mat-card-image src="{{people.image || 'https://image.flaticon.com/icons/png/512/36/36601.png'}}" >
+  <mat-card-content>
+    <div class="row">
+      <div class="col-md-6">
+        <button type="button" class="btn btn-inverse" (click)="openDialog()">Detalhar</button>
+      </div>
+      <div class="col-md-6">
+        <button type="button" class="btn btn-dark" (click)="reply()" [disabled]="answer" >Responder</button>
+      </div>
+    </div>
+  </mat-card-content>
+    <form [formGroup]="answerForm" *ngIf="showFormAnswer">
+      <div class="row">
+        <div class="col-7">
+          <mat-form-field [hideRequiredMarker]="true">
+            <input matInput type="text"  placeholder="Name" formControlName="answer" required>
+            <mat-error *ngIf="answerForm.controlIsInvalid('answer')">Campo Obrigatorio!</mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <button type="button" class="btn btn-secondary" (click)="processAnswer()">Enviar</button>
+        </div>
+      </div>
+    </form>
+</mat-card>
+
+
