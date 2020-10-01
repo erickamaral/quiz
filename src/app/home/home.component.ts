@@ -27,11 +27,6 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         this._storageService.resertPoints();
-
-        /**
-         * Usar o mock quando a api nao responder bem, a API de image do google tem 100 requests diarias free
-         */
-        // this._storageService.initStorageMock();
         this._initStorage();
     }
 
