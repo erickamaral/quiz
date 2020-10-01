@@ -10,7 +10,7 @@ import { StorageService } from '../../shared/services/storage.service';
   templateUrl: './people-item.component.html',
   styleUrls: ['./people-item.component.css']
 })
-export class PeopleItemComponent implements OnInit {
+export class PeopleItemComponent {
 
   @Input() public people: People;
   answerForm = new AnswerForm();
@@ -31,13 +31,9 @@ export class PeopleItemComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
-
   reply() {
     this.showFormAnswer = true;
   }
-
 
   processAnswer() {
     if (!this.answerForm.isValid()) {
