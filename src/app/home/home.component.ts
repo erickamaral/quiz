@@ -88,21 +88,21 @@ export class HomeComponent implements OnInit {
     }
 
     private _addMoviesPeople(urls: Array<string>, people: People) {
-        for (const key in urls) {
-            this._apiService.getRequest(urls[key]).subscribe(response => {
-                const movie = new Movie();
-                movie.deserialize(response);
-                people.addMovie(movie);
-            });
-        }
+      urls.forEach(url => {
+        this._apiService.getRequest(url).subscribe(response => {
+            const movie = new Movie();
+            movie.deserialize(response);
+            people.addMovie(movie);
+        });
+      });
     }
 
     private _addVehiclesPeople(urls: Array<string>, people: People) {
-        for (const key in urls) {
-            this._apiService.getRequest(urls[key]).subscribe(response => {
-                people.addVehicles(response['name']);
-            });
-        }
+      urls.forEach(url => {
+        this._apiService.getRequest(urls[key]).subscribe(response => {
+            people.addVehicles(response['name']);
+        });
+      });
     }
 
 
